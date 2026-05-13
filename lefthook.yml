@@ -1,0 +1,60 @@
+---
+remotes:
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-trailing-whitespace
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-git-conflict-markers
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-missing-final-newline
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-typos
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-yamllint
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-editorconfig-checker
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-ascii-only
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-unicode-lint
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-git-no-local-paths
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-file-size-check
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-gitleaks
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-execute-permissions
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-commit-msg-lint
+    ref: main
+    configs:
+      - lefthook-remote.yml
+
+pre-commit:
+  parallel: true
+
+pre-push:
+  parallel: true
