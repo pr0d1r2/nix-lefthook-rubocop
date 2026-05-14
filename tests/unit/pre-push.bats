@@ -3,7 +3,7 @@
 setup() {
     load "${BATS_LIB_PATH}/bats-support/load.bash"
     load "${BATS_LIB_PATH}/bats-assert/load.bash"
-    REPO_ROOT="$(cd "$BATS_TEST_DIRNAME/.." && pwd)"
+    REPO_ROOT="$(cd "$BATS_TEST_DIRNAME/../.." && pwd)"
 
     export PATH="$BATS_TEST_DIRNAME/stubs:$PATH"
     export STUB_LOG="$BATS_TEST_TMPDIR/stub.log"
