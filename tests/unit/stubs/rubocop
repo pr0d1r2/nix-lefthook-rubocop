@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+echo "$*" >> "${STUB_LOG}"
+if [ "${STUB_EXIT:-0}" != "0" ]; then
+    for f in "$@"; do
+        case "$f" in -*) continue ;; esac
+        echo "$f:1:1: C: Style/Foo" >&2
+    done
+fi
+exit "${STUB_EXIT:-0}"
