@@ -53,6 +53,14 @@ remotes:
     configs:
       - lefthook-remote.yml
 
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-bats-unit
+    ref: main
+    configs:
+      - lefthook-remote.yml
+  - git_url: https://github.com/pr0d1r2/nix-lefthook-tdd-order-bats
+    ref: main
+    configs:
+      - lefthook-remote.yml
 pre-commit:
   parallel: true
   commands:

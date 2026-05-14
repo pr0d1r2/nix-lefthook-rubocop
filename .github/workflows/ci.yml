@@ -32,13 +32,6 @@ jobs:
           TERM=dumb nix develop --accept-flake-config
           --ignore-environment --keep TERM .#ci
           --command bash -c 'lefthook run pre-push --all-files'
-      - name: Unit tests
-        run: >-
-          TERM=dumb nix develop --accept-flake-config
-          --ignore-environment --keep TERM .#ci
-          --command bash -c
-          'BATS_LIB_PATH="$(dirname "$(which bats)")/../share/bats"
-          bats --recursive tests/unit/'
 
   build-macos:
     if: >-
@@ -66,10 +59,3 @@ jobs:
           TERM=dumb nix develop --accept-flake-config
           --ignore-environment --keep TERM .#ci
           --command bash -c 'lefthook run pre-push --all-files'
-      - name: Unit tests
-        run: >-
-          TERM=dumb nix develop --accept-flake-config
-          --ignore-environment --keep TERM .#ci
-          --command bash -c
-          'BATS_LIB_PATH="$(dirname "$(which bats)")/../share/bats"
-          bats --recursive tests/unit/'
