@@ -55,6 +55,14 @@ remotes:
 
 pre-commit:
   parallel: true
+  commands:
+    execute-permissions:
+      env:
+        LEFTHOOK_EXECUTE_PERMISSIONS_ALLOWED: '^(\\./)?tests/unit/stubs/'
 
 pre-push:
   parallel: true
+  commands:
+    execute-permissions:
+      env:
+        LEFTHOOK_EXECUTE_PERMISSIONS_ALLOWED: '^(\\./)?tests/unit/stubs/'
